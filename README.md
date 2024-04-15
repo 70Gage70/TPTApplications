@@ -4,7 +4,7 @@ To run the included notebook, follow these instructions.
 
 ### 1. 
 
-Install [Julia](https://julialang.org/). To do this on windows, execute
+Install [Julia](https://julialang.org/). To do this on Windows, execute
 
 ```
 winget install julia -s msstore
