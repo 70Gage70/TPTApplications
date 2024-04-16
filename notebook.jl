@@ -38,6 +38,32 @@ md"""
 # Transition Path Theory In Grid World
 """
 
+# ╔═╡ bb76dc31-e937-4fdc-82a1-0ad84162e3c1
+HTML("""
+<!-- the wrapper span -->
+<div>
+	<button id="myrestart" href="#">RESTART NOTEBOOK</button>
+	
+	<script>
+		const div = currentScript.parentElement
+		const button = div.querySelector("button#myrestart")
+		const cell= div.closest('pluto-cell')
+		console.log(button);
+		button.onclick = function() { restart_nb() };
+		function restart_nb() {
+			console.log("Restarting Notebook");
+		        cell._internal_pluto_actions.send(                    
+		            "restart_process",
+                            {},
+                            {
+                                notebook_id: editor_state.notebook.notebook_id,
+                            }
+                        )
+		};
+	</script>
+</div>
+""")
+
 # ╔═╡ e2377ddd-03fe-424d-82e9-8d90d2c5ac56
 md"""
 ---
@@ -2423,6 +2449,7 @@ version = "1.4.1+1"
 
 # ╔═╡ Cell order:
 # ╟─53fc4147-2716-4b36-9752-ffc3693d1c72
+# ╟─bb76dc31-e937-4fdc-82a1-0ad84162e3c1
 # ╟─acfe17fe-0467-4f0f-8fcb-bc5e6b6f01be
 # ╟─b6deb2b4-39eb-48e9-8bbe-340121c3de2e
 # ╟─e2377ddd-03fe-424d-82e9-8d90d2c5ac56
